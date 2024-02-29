@@ -1,0 +1,131 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.604556616418.766778805481"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.604556616418.364619745871"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.604556616418.1204058916692"
+              }
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "samples": [
+                "{month}",
+                "i was born on {month}"
+              ]
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "i was born on {day}",
+                "{day}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "i was born in the year {year}",
+                "i was born in {year}",
+                "{year}"
+              ]
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "samples": [
+            "I was born on {month} {day} {year}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "abhinav chatbot"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What was the date on which you were born"
+          }
+        ],
+        "id": "Elicit.Slot.604556616418.364619745871"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What was your year of birth"
+          }
+        ],
+        "id": "Elicit.Slot.604556616418.1204058916692"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What was the month you were born"
+          }
+        ],
+        "id": "Elicit.Slot.604556616418.766778805481"
+      }
+    ]
+  }
+}
